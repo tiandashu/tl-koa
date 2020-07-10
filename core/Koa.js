@@ -2,12 +2,6 @@ const http = require('http');
 const Context = require('./Context')
 const Compose = require('./Compose')
 
-http.createServer(function (request, response) {
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.end('Hello World');
-}).listen(8081);
-
-
 class Koa {
   constructor() {
     this.middlewares = []
